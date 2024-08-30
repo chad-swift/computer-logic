@@ -1,0 +1,11 @@
+START
+    DEFINE number accountBalance = INPUT "How much is accountBalance?"
+    DEFINE timesOverdrawn = "How many times has account been overdrawn?"
+    DEFINE overdraftCharge = 5
+    DEFINE overDraftPercentage = 0.01
+    DEFINE fee = (accountBalance * overDraftPercentage) + (timesOverdrawn * overdraftCharge)
+    DEFINE newBalance = accountBalance - fee
+    OUTPUT "Fee issued for overdraft is " + fee
+    OUTPUT "Account Balance is " + newBalance
+    OUTPUT "Thank you for using this program!"
+STOP

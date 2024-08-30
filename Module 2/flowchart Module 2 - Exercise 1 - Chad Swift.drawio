@@ -1,0 +1,37 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="y5GqP7U_eT4eakeW0AvS">
+    <mxGraphModel dx="1304" dy="776" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="J9Upatn0u1KBESVHytsZ-1" value="Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="10" width="150" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="J9Upatn0u1KBESVHytsZ-2" value="DEFINE customerLastName = INPUT &quot;Last Name?&quot;&lt;div&gt;DEFINE numBathrooms = INPUT &quot;Input number of bathrooms needing cleaned&quot;&lt;/div&gt;&lt;div&gt;DEFINE numOtherRooms = INPUT &quot;Input number of other rooms needing cleaned&quot;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="160" width="490" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="J9Upatn0u1KBESVHytsZ-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J9Upatn0u1KBESVHytsZ-1" target="J9Upatn0u1KBESVHytsZ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J9Upatn0u1KBESVHytsZ-5" value="DEFINE serviceFee = 40&lt;div&gt;DEFINE perBathroom = 15&lt;/div&gt;&lt;div&gt;DEFINE perOtherRoom = 10&lt;br&gt;&lt;div&gt;DEFINE bathRoomServiceCharge = (numBathrooms * perBathroom)&amp;nbsp;&lt;/div&gt;&lt;div&gt;DEFINE otherRoomServiceCharge = (numOtherRooms * perOtherRoom)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;DEFINE totalCost = serviceFee + bathroomServiceCharge + otherRoomServiceCharge&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="280" width="650" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="J9Upatn0u1KBESVHytsZ-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J9Upatn0u1KBESVHytsZ-2" target="J9Upatn0u1KBESVHytsZ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J9Upatn0u1KBESVHytsZ-7" value="OUTPUT customerLastName&lt;div&gt;OUTPUT numBathrooms + &quot; will cost $&quot; + bathroomServiceCharge + &quot; to clean.&quot;&lt;/div&gt;&lt;div&gt;OUTPUT numOtherRooms+ &quot; will cost $&quot; + otherRoomServiceCharge + &quot; to clean.&quot;&lt;br&gt;&lt;/div&gt;&lt;div&gt;OUTPUT &quot;The total cost will be $&quot; + totalCost + &quot; to clean.&quot;&lt;br&gt;&lt;/div&gt;&lt;div&gt;OUTPUT &quot;Program complete. Thank you for using.&quot;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="430" width="530" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="J9Upatn0u1KBESVHytsZ-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J9Upatn0u1KBESVHytsZ-5" target="J9Upatn0u1KBESVHytsZ-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J9Upatn0u1KBESVHytsZ-9" value="Stop" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="335" y="600" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="J9Upatn0u1KBESVHytsZ-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="J9Upatn0u1KBESVHytsZ-7" target="J9Upatn0u1KBESVHytsZ-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

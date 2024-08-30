@@ -1,0 +1,37 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8">
+  <diagram name="Page-1" id="2uq_JzHz3aNDA0Kp51Gh">
+    <mxGraphModel dx="1434" dy="854" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SWeitnBs2cYexbDPfGCJ-2" value="START" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SWeitnBs2cYexbDPfGCJ-3" value="DEFINE numHours = INPUT &quot;Input number of hours for the job&quot;&lt;div&gt;DEFINE costOfMaterials = INPUT &quot;Input total cost of materials&quot;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="190" width="520" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="SWeitnBs2cYexbDPfGCJ-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SWeitnBs2cYexbDPfGCJ-2" target="SWeitnBs2cYexbDPfGCJ-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SWeitnBs2cYexbDPfGCJ-5" value="DEFINE laborCost = 30 * numHours&lt;div&gt;DEFINE totalCost = laborCost + (costOfMaterials * 1.2)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="320" width="360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="SWeitnBs2cYexbDPfGCJ-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SWeitnBs2cYexbDPfGCJ-3" target="SWeitnBs2cYexbDPfGCJ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SWeitnBs2cYexbDPfGCJ-7" value="OUTPUT totalCost&lt;div&gt;OUPUT &quot;End of Program&quot;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="460" width="340" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="SWeitnBs2cYexbDPfGCJ-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SWeitnBs2cYexbDPfGCJ-5" target="SWeitnBs2cYexbDPfGCJ-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SWeitnBs2cYexbDPfGCJ-9" value="END" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="352.5" y="610" width="135" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="SWeitnBs2cYexbDPfGCJ-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="SWeitnBs2cYexbDPfGCJ-7" target="SWeitnBs2cYexbDPfGCJ-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

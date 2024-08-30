@@ -1,0 +1,10 @@
+START
+    DEFINE string modelName = INPUT "Input a model name"
+    DEFINE number modelHeight = INPUT "Input model's height"
+    DEFINE number modelWidth = INPUT "Input model's width"
+    DEFINE number modelDepth = INPUT "Input model's depth"
+
+    DEFINE cubicInchesInAFoot = 1728
+    DEFINE capacity = (modelHeight * modelWidth * modelDepth) /    cubicInchesInAFoot
+    OUTPUT "The model name is " + modelName + " and has " + capacity + " cubic feet capacity"
+STOP

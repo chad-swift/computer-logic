@@ -1,0 +1,43 @@
+
+// Exercise 1
+// This psudocode is intended to computer the number
+// of miles per gallon you get with your automobile'
+
+start
+    define miles = Input "Input number of miles driven"
+    define gallons = Input "Input amount of gas used, in gallons"
+    output miles/gallons
+stop
+
+// Exercise 2
+// This pseudocode is intended to describe
+// computing the daily cost of your rent
+// in a 30-day month
+
+start
+    define monthlyRent = Input "How much do you pay for rent a month?"
+    output monthlyRent/30
+stop
+
+// Exercise 3
+// This program accepts a user's monthly pay
+// and rent, utilities, and grocery bills
+// and displays the amount available for discretionary spending
+// (which might be negative)
+// Your program should output the pay and the total bills
+// as well as the remaining discretionary amount
+
+start
+    define monthlyPay = Input "How much money do you bring in
+        every month?"
+    define rentCost = Input "How much is rent?"
+    define utilitiesCost = Input "How much are utiltiies every
+        month?"
+    define groceryCost = Input "How much are groceries every 
+        month?"
+    define totalSpending = rentCost + utilitiesCost + groceryCost
+    define availableFunds = monthlyPay - totalSpending
+    output monthlyPay
+    output totalSpending
+    output availableFunds
+stop
