@@ -1,0 +1,37 @@
+START
+    // This word can be replaced with anything and the code should
+    // still work correctly.
+    DEFINE randWord = 'carrot'
+    OUTPUT "Search for " + randWord + " in the Dictionary. Open the dictionary to a random page."
+    OUTPUT "What word are you currently on in Dictionary" 
+    DEFINE currentWord = INPUT
+    WHILE randWord IS NOT currentWord
+        OUTPUT "Does the first letter of " + randWord " match the first letter of " + currentWord + "? Type 'YES' or 'NO'. "
+        DEFINE firstLetterMatches = INPUT
+        WHILE firstLetterMatches IS NOT "YES"
+            turnPages()
+            OUTPUT "What is the first word on this page?" 
+            currentWord = INPUT
+            OUTPUT "Does the first letter of " + randWord " match the first letter of " + currentWord + "? Type 'YES' or 'NO'. "
+        DEFINE firstLetterMatches = INPUT
+        ENDWHILE
+            OUTPUT "Current word is " + currentWord + "."
+            // Used 'E-O-P' here because that will not be in dictionary
+            OUTPUT "Input Next word in line or type E-O-P for End of Page"
+            currentWord = INPUT
+            IF currentWord IS "E-O-P"
+                turnPages()
+            ENDIF
+    ENDWHILE
+    OUTPUT "Success! You have found " + randWord + " in the dictionary!"
+STOP
+
+turnPages()
+    OUTPUT "Turn page FORWARD or BACKWARD?"
+    DEFINE direction = INPUT
+    IF direction IS "FORWARD"
+        OUTPUT "Turn the pages in the dictionary forward any number of pages"
+    ELSE IF direction IS "BACKWARD"
+        OUTPUT "Turn the pages in the dictionary backward any number of pages"
+    ENDIF
+return

@@ -1,0 +1,25 @@
+START
+    // Presumably the function for rounding a number is built in.
+    // Presumably the function to generate a random number is built in, 
+    // and picks a number between 0 and 1. 
+    // randNum multiplies the random number by 100 and rounds it to the nearest number. 
+    DEFINE randNum = ROUND (RAND * 100)
+    OUTPUT "Pick a number between 1 and 100"
+    DEFINE guess = INPUT
+    WHILE guess IS NOT > 1 AND < 100
+        OUTPUT "Number MUST be between 1 and 100, pick another number." 
+        guess = INPUT
+    ENDWHILE
+    WHILE guess IS NOT randNum
+        OUTPUT "Your current guess is " + guess + "."
+        IF guess > randNum
+            OUTPUT "Guess is too high, enter a new number"
+            guess = INPUT
+        ELSE 
+            OUTPUT "Guess is too low, enter a new number"
+        ENDIF
+    ENDWHILE
+    OUTPUT "Success! You have guessed the correct number!"
+END
+
+  
