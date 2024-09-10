@@ -5,7 +5,7 @@ START
     OUTPUT "Search for " + randWord + " in the Dictionary. Open the dictionary to a random page."
     OUTPUT "What word are you currently on in Dictionary" 
     DEFINE currentWord = INPUT
-    WHILE randWord IS NOT currentWord
+    WHILE randWord <> currentWord
         OUTPUT "Does the first letter of " + randWord " match the first letter of " + currentWord + "? Type 'YES' or 'NO'. "
         DEFINE firstLetterMatches = INPUT
         WHILE firstLetterMatches IS NOT "YES"

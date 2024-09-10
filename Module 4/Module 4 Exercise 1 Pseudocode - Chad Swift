@@ -6,11 +6,11 @@ START
     DEFINE randNum = ROUND (RAND * 100)
     OUTPUT "Pick a number between 1 and 100"
     DEFINE guess = INPUT
-    WHILE guess IS NOT > 1 AND < 100
+    WHILE guess < 1 AND guess < 100
         OUTPUT "Number MUST be between 1 and 100, pick another number." 
         guess = INPUT
     ENDWHILE
-    WHILE guess IS NOT randNum
+    WHILE guess <> randNum
         OUTPUT "Your current guess is " + guess + "."
         IF guess > randNum
             OUTPUT "Guess is too high, enter a new number"
