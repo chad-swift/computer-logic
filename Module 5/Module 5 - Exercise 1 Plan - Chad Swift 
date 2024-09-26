@@ -1,0 +1,473 @@
+Planning notes for Jeopardy!
+
+A timer will be needed in order to facilitate a time limit
+    The timer will print the current time every second, with a prompt to "buzz in"
+
+A buzzer will be needed in order to interrupt the timer to answer the question
+
+Instantiate an array of topics for Jeopardy
+
+Instantiate an array of boxes
+
+// based off a real Jeapardy! game, show #9156, aired on Monday, September 9, 2024
+
+function to print board:
+                [1]                         [2]                  [3]                           [4]                 [5]           [6]
+        [Let's Hit Highway 101]   [Pop goes the Culture], [Also Known As],  [Going to the Planetary Extremes], [Parenting], ["Mom" & "Dad"]
+ 
+[A]$200          1A                          2A                   3A                          4A                    5A            6A
+[B]$400          1B                          2B                   3B                          4B                    5B            6B                    
+[C]$600          1C                          2C                   3C                          4C                    5C            6C
+[D]$800          1D                          2D                   3D                          4D                    5D            6D
+[E]$1000         1E                          2E                   3E                          4E                    5E            6E
+
+
+1A-P - $200
+1A-A - A Civil War fortress & the Bay Area Discovery Museum are on either side of this landmark with a main span of 4,200' that carries the 101
+1A-Q - Golden Gate Bridge
+
+1B-P - $400
+1B-A - Just off the 101 is this filmmaking theme park, where tourists saw George the fisherman become shark food from 1976 to 2001
+1B-Q - Universal Studios
+
+1C-P - $600
+1C-A - An hour north of Eureka, a different drive-through awaits you in Klamath near the national park named for this large type of tree
+1C-Q - Redwood
+
+1D-P - $800
+1D-A - Knowing this state capital is at the south end of Puget Sound is geography 101
+1D-Q- Olympia
+
+1E-P - $1000
+1E-A - Hop off the 101 onto the Pacific Coast Highway to see this landmark owned by a newspaper biz giant; it even had its own airport, built in the 1920s
+1E-Q - Hearst Castle
+-----------------------------------------------------------------
+2A-P - $200
+2A-A - Tawny Newsome got animated & boldly went on the "Lower Decks" of this long-running sci-fi franchise as Beckett Mariner
+2A-Q - Star Trek
+
+2B-P - $400
+2B-A - There's a fungus among us, & as Ellie, Bella Ramsey has to deal with it in many, many horrific ways on this HBO drama
+2B-Q - The Last of Us
+
+2C-P - $600
+2C-A - An escaped convict named Stagg R. Leigh writes "My Pafology" (or does he?) in this 2023 Jeffrey Wright film
+2C-Q - American Fiction
+
+2D-P - $800
+2D-A - In this 1998 film Jane Kaczmarek was Tobey Maguire's mom in color; Joan Allen was his mom in black & white
+2D-Q - Pleasantville
+
+2E-P - $1000
+2E-A - He took us to church & No. 2 on the Hot 100 in 2014, & in 2024, this one-named Irish singer went one slot higher with "Too Sweet"
+2E-Q - Hozier
+-----------------------------------------------------------------
+3A-P - $200
+3A-A - The pound sign or octothorpe on your socials
+3A-Q - a hashtag
+
+3B-P - $400
+3B-A - Rapper Shawn Carter
+3B-Q - Jay-Z
+
+3C-P - $600
+3C-A - Myanmar
+3C-Q - Burma
+
+3D-P - $800
+3D-A - The court security officer
+3D-Q - the bailiff
+
+3E-P - $1000
+3E-A - Conqueror Timur
+3E-Q - Tamerlane  
+-----------------------------------------------------------------
+4A-P - $200
+4A-A - It's got the strongest gravity of any planet, nearly 2 1/2 times ours
+4A-Q - Jupiter
+
+4B-P - $400
+4B-A - The greenhouse effect, not just proximity to the sun, makes it the hottest of the planets
+4B-Q - Venus
+
+4C-P - $600
+4C-A - It not only has an odd axis of rotation, it's also the coldest planet, with temps approaching -400 Fahrenheit
+4C-Q - Uranus
+
+4D-P - $800
+4D-A - Mostly hydrogen & helium, it has the lowest average density of any planet in the solar system & would float in a really big tub
+4D-Q - Saturn
+
+4E-P - $1000
+4E-A - It has the most eccentric orbit of any planet, varying between 29 million & 43 million miles
+4E-Q - Mercury
+-----------------------------------------------------------------
+
+5A-P - $200
+5A-A - Early February brings the world day for parents to do this, a bonding & cognitive benefit, so yes, Berenstain Bears one more time
+5A-Q - reading books to their kids
+
+5B-P - $400
+5B-A - Let grandparents do this with candy & late nights--it's part of their role & face it, they won't--someday they--you know what I mean
+5B-Q - spoiling
+
+5C-P - $600
+5C-A - Is this OK in front of your kids? Ali Wentworth & Heidi Klum have publicly said it is for them & theirs
+5C-Q - nudity (being naked in front of the kids)
+
+5D-P - $800
+5D-A - Resource family is now the term in California for these "parents" who take in kids often en route to adoption
+5D-Q - foster parents
+
+5E-P - $1000
+5E-A - Some airports & other spaces have installed Pluie, a self-sanitizing type of this often desperately needed furniture item
+5E-Q - a changing table
+-----------------------------------------------------------------
+
+6A-P - $200
+6A-A - It's defined as an embarrassing, unoriginal attempt at humor--wanna hear one?
+6A-Q - a dad joke
+
+6B-P - $400
+6B-A - Merriam-Webster defines this as "a typically suburban mother who accompanies her children to their...games"
+6B-Q - a soccer mom
+
+6C-P - $600
+6C-A - This paternal name for a rich benefactor comes from "Little Orphan Annie"
+6C-Q - Daddy Warbucks
+
+6D-P - $800
+6D-A - Cripes! It's time to scram! To beat it! To do this, originally Civil War-era slang for retreating in haste
+6D-Q - skedaddle
+
+6E-P - $1000
+6E-A - This spice of the ginger family is popular in Indian food
+6E-Q - cardamom
+-----------------------------------------------------------------
+
+store the board information in an object organized as follows:
+
+categories = [{
+    name: string,
+    code: number
+    boxes: [
+        {
+            code: string
+            price: number
+            answer: string
+            question: string
+        }
+    ]
+}]
+
+questions in this data would need to be rewritten as questions so as to present the user with feedback should they not answer in time
+    
+categories = [
+    {
+        name: "Let's Hit Highway 101",
+        code: 1,
+        boxes: [
+            {
+                code: A,
+                price: 200,
+                answer: "A Civil War fortress & the Bay Area Discovery Museum are on either side of this landmark with a main span of 4,200' that carries the 101",
+                question: "Golden Gate Bridge"
+                isDailyDouble: false
+            },
+            {
+                code: B,
+                price: 400,
+                answer: "Just off the 101 is this filmmaking theme park, where tourists saw George the fisherman become shark food from 1976 to 2001",
+                question: "Universal Studios"
+                isDailyDouble: false
+            },
+            {
+                code: C,
+                price: 600,
+                answer: "An hour north of Eureka, a different drive-through awaits you in Klamath near the national park named for this large type of tree",
+                question: "Redwood"
+                isDailyDouble: false
+            },
+            {
+                code: D,
+                price: 800,
+                answer: "Knowing this state capital is at the south end of Puget Sound is geography 101",
+                question: "Olympia"
+                isDailyDouble: true
+            },
+            {
+                code: E,
+                price: 1000,
+                answer: "Hop off the 101 onto the Pacific Coast Highway to see this landmark owned by a newspaper biz giant; it even had its own airport, built in the 1920s",
+                question: "Hearst Castle"
+                isDailyDouble: false
+            }
+        ]
+    },
+    {
+        name: "Pop goes the Culture",
+        code: 2,
+        boxes: [
+            {
+                code: A,
+                price: 200,
+                answer: "Tawny Newsome got animated & boldly went on the "Lower Decks" of this long-running sci-fi franchise as Beckett Mariner",
+                question: "Star Trek"
+                isDailyDouble: false
+            },
+            {
+                code: B,
+                price: 400,
+                answer: "There's a fungus among us, & as Ellie, Bella Ramsey has to deal with it in many, many horrific ways on this HBO drama",
+                question: "The Last of Us"
+                isDailyDouble: false
+            },
+            {
+                code: C,
+                price: 600,
+                answer: "An escaped convict named Stagg R. Leigh writes "My Pafology" (or does he?) in this 2023 Jeffrey Wright film",
+                question: "American Fiction"
+                isDailyDouble: false
+            },
+            {
+                code: D,
+                price: 800,
+                answer: "In this 1998 film Jane Kaczmarek was Tobey Maguire's mom in color; Joan Allen was his mom in black & white",
+                question: "Pleasantville"
+                isDailyDouble: false
+            },
+            {
+                code: E,
+                price: 1000,
+                answer: "He took us to church & No. 2 on the Hot 100 in 2014, & in 2024, this one-named Irish singer went one slot higher with 'Too Sweet'",
+                question: "Hozier"
+                isDailyDouble: false
+            }
+        ]
+    },
+    {
+        name: "Also Known As",
+        code: 3,
+        boxes: [
+            {
+                code: A,
+                price: 200,
+                answer: "The pound sign or octothorpe on your socials",
+                question: "a hashtag"
+                isDailyDouble: false
+            },
+            {
+                code: B,
+                price: 400,
+                answer: "Rapper Shawn Carter",
+                question: "Jay-Z"
+                isDailyDouble: false
+            },
+            {
+                code: C,
+                price: 600,
+                answer: "Myanmar",
+                question: "Burma"
+                isDailyDouble: false
+            },
+            {
+                code: D,
+                price: 800,
+                answer: "The court security officer",
+                question: "the bailiff"
+                isDailyDouble: false
+            },
+            {
+                code: E,
+                price: 1000,
+                answer: "Conqueror Timur",
+                question: "Tamerlane"
+                isDailyDouble: false
+            }
+        ]
+    },
+    {
+        name: "Going to the Planetary Extremes",
+        code: 4,
+        boxes: [
+            {
+                code: A,
+                price: 200,
+                answer: "It's got the strongest gravity of any planet, nearly 2 1/2 times ours",
+                question: "Jupiter"
+                isDailyDouble: false
+            },
+            {
+                code: B,
+                price: 400,
+                answer: "The greenhouse effect, not just proximity to the sun, makes it the hottest of the planets",
+                question: "Venus"
+                isDailyDouble: false
+            },
+            {
+                code: C,
+                price: 600,
+                answer: "It not only has an odd axis of rotation, it's also the coldest planet, with temps approaching -400 Fahrenheit",
+                question: "Uranus"
+                isDailyDouble: false
+            },
+            {
+                code: D,
+                price: 800,
+                answer: "Mostly hydrogen & helium, it has the lowest average density of any planet in the solar system & would float in a really big tub",
+                question: "Saturn"
+                isDailyDouble: false
+            },
+            {
+                code: E,
+                price: 1000,
+                answer: "It has the most eccentric orbit of any planet, varying between 29 million & 43 million miles",
+                question: "Mercury"
+                isDailyDouble: false
+            }
+        ]
+    },
+    {
+        name: "Parenting",
+        code: 5,
+        boxes: [
+            {
+                code: A,
+                price: 200,
+                answer: "Early February brings the world day for parents to do this, a bonding & cognitive benefit, so yes, Berenstain Bears one more time",
+                question: "reading books to their kids"
+                isDailyDouble: false
+            },
+            {
+                code: B,
+                price: 400,
+                answer: "Let grandparents do this with candy & late nights--it's part of their role & face it, they won't--someday they--you know what I mean",
+                question: "spoiling"
+                isDailyDouble: false
+            },
+            {
+                code: C,
+                price: 600,
+                answer: "Is this OK in front of your kids? Ali Wentworth & Heidi Klum have publicly said it is for them & theirs",
+                question: "nudity (being naked in front of the kids)"
+                isDailyDouble: false
+            },
+            {
+                code: D,
+                price: 800,
+                answer: "Resource family is now the term in California for these "parents" who take in kids often en route to adoption",
+                question: "foster parents"
+                isDailyDouble: false
+            },
+            {
+                code: E,
+                price: 1000,
+                answer: "Resource family is now the term in California for these "parents" who take in kids often en route to adoption",
+                question: "foster parents"
+                isDailyDouble: false
+            }
+        ]
+    },
+    {
+        name: "'Mom' & 'Dad'",
+        code: ,
+        boxes: [
+            {
+                code: A,
+                price: 200,
+                answer: "It's defined as an embarrassing, unoriginal attempt at humor--wanna hear one?",
+                question: "a dad joke"
+                isDailyDouble: false
+            },
+            {
+                code: B,
+                price: 400,
+                answer: "Merriam-Webster defines this as 'a typically suburban mother who accompanies her children to their...games'",
+                question: "a soccer mom"
+                isDailyDouble: false
+            },
+            {
+                code: C,
+                price: 600,
+                answer: "This paternal name for a rich benefactor comes from 'Little Orphan Annie'",
+                question: "Daddy Warbucks"
+                isDailyDouble: false
+            },
+            {
+                code: D,
+                price: 800,
+                answer: "Cripes! It's time to scram! To beat it! To do this, originally Civil War-era slang for retreating in haste",
+                question: "skedaddle"
+                isDailyDouble: false
+            },
+            {
+                code: E,
+                price: 1000,
+                answer: "This spice of the ginger family is popular in Indian food",
+                question: "cardamom"
+                isDailyDouble: false
+            }
+        ]
+    }
+]
+
+
+Secretly pick a square to be the daily double - 1D
+
+As long as there are categories left to pick from, the game keeps going
+
+instantiate welcome message
+
+instantiate player 1 goes phrase, asks to choose a category
+
+display array of topics
+
+instantiate player 1 choose a price phrase
+
+create variable to store current players turn as a state
+
+instantiate player 1 score to 0
+instantiate player 2 score to 0
+
+Begin game
+
+display welcome message
+
+print table module
+
+greet player 1, ask to choose a category, display a list of 1, 2, 3, 4, 5, or 6. The user will read the categories that have boxes still available as a string but the input will expect a number. while loop until a number between 1 and 6 is chosen. 
+
+print table module
+
+Ask player 1 to choose a price, display a list of a, b, c, d, e. The user will see boxes that are still available. while loop until letters, a, b, c, d, or e are chosen. 
+
+Assemble a combination input from the user of the categories + price (should assemble something like 4C). 
+
+Use a switch statement to compare the input with table.box.name. When it finds a match, it should go to the correct answer stored within the same object
+
+run timer module
+
+allow player to buzz in by typing any character followed by enter
+
+The player must answer in an appropriate question
+
+The input will be checked against the question stored within the same object, and check for a question mark and the words to ensure it is in the correct question format. 
+
+If the correct question is input, add the price stored in the object to that players score. 
+
+If the question is answered OR if time runs out, the price variable within this object will be overwritten with the string "-----", which will affect how the print board module prints the board in the next round
+
+repeat for player 2
+
+update currentPlayer variable
+
+
+
+
+
+
+
+
+
+
+
