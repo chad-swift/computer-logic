@@ -1,0 +1,113 @@
+
+*//
+The telecommunications company charges a monthly base bill of $5 for texting services, with additional charges as follows:
+
+The first 100 monthly text messages are included in the base bill.
+A bill of two cents is applied to each text message sent after the 300th message.
+A total tax rate of 14% is added to all bills.
+A bill of three cents is applied to each text message sent after the first 100, up to 300 messages.
+Develop a flowchart or pseudocode (your choice of tool) for the following scenarios:
+
+Collects a customer's area code (three digits), phone number (seven digits), and total number of text messages sent.
+It should display all input data and the monthly bill before and after taxes.
+The program continues to collect text message data until a specified sentinel value is entered. Then, it displays all the details gathered.
+Details will only be displayed for customers who have sent over 100 text messages.
+Details will only be displayed for customers whose total bill, including taxes, exceeds $10.
+Prompts the user to enter a three-digit area code to view bills from that specific area. The program will collect text message data until a specified sentinel value is entered, displaying only messages sent from the designated area code.
+//*
+
+START
+    DEFINE areaCode
+    DEFINE phoneNumber
+    DEFINE baseFee = 5
+    DEFINE bill
+    DEFINE userAction
+    DEFINE numberOfTexts
+    DEFINE notification
+
+    // Object which stores all bills organized by area code. I not sure how else to represent bills made outside of my program
+    DEFINE bills = {
+        areaCodes: [
+            {
+                code: 
+                userData: [
+                    {
+                        bill: number,
+                        messages: [
+                            {
+                                message: string
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+
+    OUTPUT "Provide area code:"
+    INPUT areaCode
+    WHILE areaCode length <> 3 AND areaCode type <> number
+       OUTPUT "Provide a valid area code:"
+       INPUT areaCode
+    ENDWHILE
+    OUTPUT "Provide phone number"
+    INPUT phoneNumber
+
+    WHILE phoneNumber length <> 7 AND phoneNumber type <> number
+        OUTPUT "Provide a valid phone number:"
+        INPUT phoneNumber
+    ENDWHILE
+
+    OUTPUT "What action would you like to do? Enter 1, 2, or 3. 1. Send Message, 2. View Bill, 3. View bills from area code, 4. End program"
+    INPUT userAction
+
+    
+    WHILE userAction < 3
+
+        IF numberOfTexts > 100 
+            OUTPUT "User has sent over 100 messages"
+        ENDIF
+
+        SWITCH userAction
+        CASE 1:
+            numberOfTexts += 1
+        CASE 2:
+            bill = displayBill(numberOfTexts, baseFee, areaCode, phoneNumber)
+            IF bill > 10
+                OUTPUT "BILL is greater than $10"
+            ENDIF
+        CASE 3: 
+            viewBillsFromArea(bills)
+        DEFAULT:
+            OUTPUT "Incorrect Selection. What action would you like to do? Enter 1, 2, or 3. 1. Send Message, 2. View Bill, 3. View bills from area code. 4. End Program"
+        INPUT userAction
+    ENDWHILE
+STOP
+
+displayBill(numberOfTexts, baseFee, areaCode, phoneNumber)
+    DEFINE bill
+    DEFINE taxes
+    OUTPUT "number of text messages sent for phone number " areacode + "-" + phoneNumber + " is " + numberOfTexts
+    IF numberOfTexts =< 100
+        bill = 5
+    ELSE IF numberOfTexts > 100 AND < 300
+        bill = (3 * numberOfTexts) + 5
+    ELSE IF numberOfTexts > 300
+        bill = (2 * numberOfTexts) + 5
+    ENDIF
+    taxes = bill * (14/100)
+    OUTPUT "Bill before taxes is " + bill
+    OUTPUT "Bill after taxes is" bill + taxes
+return bill
+
+viewBillsFromArea(bills)
+    DEFINE areaCodeInput
+    OUTPUT "Input Area Code:"
+    INPUT areaCodeInput
+
+    FOR areaCode.code in bills.areaCodes
+        if areaCodeInput = areaCode.code
+            OUTPUT: bills.areaCodes.code
+        ENDIF
+    ENDFOR
+return
