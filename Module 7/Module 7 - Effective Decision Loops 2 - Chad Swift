@@ -1,0 +1,28 @@
+STOP
+    DEFINE currentRetirementSavings
+    DEFINE yearsLeft
+    DEFINE retirementAge = 65
+    DEFINE interest = 0.03
+    DEFINE annualSpending = 60000
+    DEFINE counter
+
+    OUPTUT "Enter in working years left or 999 to quit"
+    INPUT yearsLeft
+
+    WHILE yearsLeft <> 999
+        OUTPUT "Enter in current retirement savings"
+        INPUT currentRetirementSavings
+        OUTPUT "Current retirement schedule:"
+        OUTPUT "Starting retirement savings: $" + currentRetirementSavings
+        FOR DEFINE i = 1; currentRetirementSavings > 0 OR i <= 30; i++
+            IF currentRetirementSavings < annualSpending
+                OUTPUT "You will not have enough to cover the entire year"
+            ENDIF
+            currentRetirementSavings -= annualSpending
+            currentRetirementSavings += currentRetirementSavings * interest
+            OUTPUT "End of Year " + i + ": $" + currentRetirementSavings
+        ENDFOR
+        OUPTUT "Enter in new amount of years to check or 999 to quit"
+        INPUT yearsLeft
+    ENDWHILE
+START

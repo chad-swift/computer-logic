@@ -1,0 +1,11 @@
+START
+    DEFINE accumulator = 0
+    DEFINE entry
+    OUTPUT "Enter a number or 0 to finish and total all numbers"
+    INPUT number entry
+    WHILE entry <> 0
+        accumulator += entry
+        INPUT number entry
+    ENDWHILE
+    OUTPUT "The program has finished. The sum is " + accumulator
+STOP
