@@ -1,0 +1,16 @@
+START
+    DEFINE numArr
+    DEFINE num
+    DEFINE counter = 0
+    OUTPUT "Enter a number or 000 to quit:"
+    INPUT num
+    WHILE numArr.length < 20 OR num <> 000 
+       numArr[counter] = num
+       OUTPUT "Enter a number or 000 to quit:"
+       INPUT num
+       counter++
+    ENDFOR
+    FOR DEFINE i = numArr.length - 1; i >= 0; i--
+        OUTPUT numArr[i]
+    ENDFOR
+STOP

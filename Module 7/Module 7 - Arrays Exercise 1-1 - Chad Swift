@@ -1,0 +1,10 @@
+START
+    DEFINE numArr[20]
+    FOR DEFINE i = 0; i < numArr.length; i++
+        OUTPUT "Input number " + i
+        INPUT numArr[i]
+    ENDFOR
+    FOR DEFINE i = numArr.length - 1; i >= 0; i--
+        OUTPUT numArr[i]
+    ENDFOR
+STOP

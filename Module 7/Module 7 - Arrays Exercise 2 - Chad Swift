@@ -1,0 +1,35 @@
+START
+    DEFINE coffeePrice = 2
+    DEFINE choice
+    DEFINE total = coffeePrice
+    DEFINE productArr = [
+        Whipped Cream, 
+        Cinnamon,
+        Chocolate sauce,
+        Amaretto,
+        Irish whiskey 
+        ]
+    DEFINE priceArr = [
+        0.89,
+        0.25,
+        0.59,
+        1.50,
+        1.75
+    ]
+    OUTPUT "Select Choice 1-5 or 0 to complete order: "
+    OUTPUT "CHOICE 1 - Whipped Cream - $0.89"
+    OUTPUT "CHOICE 2 - Cinnamon - $0.25"
+    OUTPUT "CHOICE 3 - Chocolate sauce - $0.59"
+    OUTPUT "CHOICE 4 - Amaretto - $1.50"
+    OUTPUT "CHOICE 5 - Irish whiskey - $1.75"
+    INPUT choice
+    WHILE choice <> 0
+        IF choice > 5
+            OUTPUT "Sorry, we do not carry that"
+        ENDIF
+        OUTPUT "Added " + productArr[choice - 1] + " to order"
+        total += priceArr[choice - 1]
+    ENDWHILE
+    OUTPUT "Your total for your coffee is " + total
+
+STOP
